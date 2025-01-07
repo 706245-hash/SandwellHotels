@@ -43,10 +43,10 @@
                 @Html.DisplayFor(modelItem => item.EndDate)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.HotelRoom.Id)
+                @Html.DisplayFor(modelItem => item.HotelRoom.Name)
             </td>
             <td>
-                <a asp-controller="HotelRooms" asp-action="ViewhotelRoom" asp-route-hotelRoomId="@item.Id" class="btn btn-secondary">View Hotel</a>
+                <a asp-controller="HotelRooms" asp-action="ViewhotelRoom" asp-route-hotelRoomId="@item.HotelRoom.Id" class="btn btn-secondary">View Hotel</a>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
                 <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>

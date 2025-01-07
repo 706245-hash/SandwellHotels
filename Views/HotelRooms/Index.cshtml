@@ -53,6 +53,7 @@
                 @Html.DisplayNameFor(model => model.IsAvailable)
             </th>
             <th></th>
+            <th>Actions</th>
         </tr>
     </thead>
     <tbody>
@@ -84,6 +85,12 @@
                 {
                     <a asp-controller="Bookings" asp-action="Create" asp-route-hotelRoomId="@item.Id" class="btn btn-secondary">Book Now</a>
                 }
+                @if(item.IsAvailable == false)
+                {
+                    <p>Already Booked</p>;
+                }
+                </td>
+                <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
                 <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
